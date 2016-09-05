@@ -5,12 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project_1___Pokemon_WPF"
         mc:Ignorable="d"
-        Title="Register" Height="300" Width="300">
+        Title="Register" Height="500" Width="800" Icon="Master-Ball.ico">
     <Grid>
-        <Button x:Name="button" Content="Button" Margin="100,195,117,0" VerticalAlignment="Top" Click="button_Click"/>
-        <TextBox x:Name="txt_username" HorizontalAlignment="Left" Height="23" Margin="75,50,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txt_password" HorizontalAlignment="Left" Height="23" Margin="75,100,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txt_mail" HorizontalAlignment="Left" Height="23" Margin="75,155,0,0" TextWrapping="Wrap" Text="mail" VerticalAlignment="Top" Width="120"/>
+        <Rectangle Fill="#FFE6363E" Stroke="Black" Margin="96,90" Opacity="0.76"/>
+
+        <Button x:Name="button" Content="Register" Margin="308,309,324,110" Click="btn_registerscreen_register_Click" Width="160" Background="#FF6E0000" FontFamily="Segoe WP Black" FontSize="16" Height="50"/>
+        <TextBox x:Name="txt_username" Height="44" Margin="130,110,130,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" FontFamily="Segoe WP Black" FontSize="20" Opacity="0.8" GotFocus="txt_username_GotFocus"/>
+        <TextBox x:Name="txt_password" Height="44" Margin="130,180,130,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" FontFamily="Segoe WP Black" FontSize="20" Opacity="0.8" GotFocus="txt_password_GotFocus"/>
+        <TextBox x:Name="txt_mail" Height="44" Margin="130,250,130,0" TextWrapping="Wrap" Text="Mail" VerticalAlignment="Top" FontFamily="Segoe WP Black" FontSize="20" Opacity="0.8" GotFocus="txt_mail_GotFocus"/>
 
     </Grid>
 </Window>
