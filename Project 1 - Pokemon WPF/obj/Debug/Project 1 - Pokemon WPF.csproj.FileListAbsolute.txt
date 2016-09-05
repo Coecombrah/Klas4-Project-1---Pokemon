@@ -1,0 +1,1 @@
+c:\users\joost\documents\visual studio 2015\Projects\Project 1 - Pokemon WPF\Project 1 - Pokemon WPF\bin\Debug\Project 1 - Pokemon WPF.exe.config
