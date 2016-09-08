@@ -1,1 +1,17 @@
 c:\users\joost\documents\visual studio 2015\Projects\Project 1 - Pokemon WPF\Project 1 - Pokemon WPF\bin\Debug\Project 1 - Pokemon WPF.exe.config
+C:\Users\joost\Documents\Visual Studio 2015\Projects\Project 1 - Pokemon WPF\Project 1 - Pokemon WPF\bin\Debug\Project 1 - Pokemon WPF.exe
+C:\Users\joost\Documents\Visual Studio 2015\Projects\Project 1 - Pokemon WPF\Project 1 - Pokemon WPF\bin\Debug\Project 1 - Pokemon WPF.pdb
+C:\Users\joost\Documents\Visual Studio 2015\Projects\Project 1 - Pokemon WPF\Project 1 - Pokemon WPF\obj\Debug\MainWindow.g.cs
+C:\Users\joost\Documents\Visual Studio 2015\Projects\Project 1 - Pokemon WPF\Project 1 - Pokemon WPF\obj\Debug\App.g.cs
+C:\Users\joost\Documents\Visual Studio 2015\Projects\Project 1 - Pokemon WPF\Project 1 - Pokemon WPF\obj\Debug\Project 1 - Pokemon WPF_MarkupCompile.cache
+C:\Users\joost\Documents\Visual Studio 2015\Projects\Project 1 - Pokemon WPF\Project 1 - Pokemon WPF\obj\Debug\Project 1 - Pokemon WPF_MarkupCompile.lref
+C:\Users\joost\Documents\Visual Studio 2015\Projects\Project 1 - Pokemon WPF\Project 1 - Pokemon WPF\obj\Debug\MainWindow.baml
+C:\Users\joost\Documents\Visual Studio 2015\Projects\Project 1 - Pokemon WPF\Project 1 - Pokemon WPF\obj\Debug\Project 1 - Pokemon WPF.g.resources
+C:\Users\joost\Documents\Visual Studio 2015\Projects\Project 1 - Pokemon WPF\Project 1 - Pokemon WPF\obj\Debug\Project_1___Pokemon_WPF.Properties.Resources.resources
+C:\Users\joost\Documents\Visual Studio 2015\Projects\Project 1 - Pokemon WPF\Project 1 - Pokemon WPF\obj\Debug\Project 1 - Pokemon WPF.csproj.GenerateResource.Cache
+C:\Users\joost\Documents\Visual Studio 2015\Projects\Project 1 - Pokemon WPF\Project 1 - Pokemon WPF\obj\Debug\Project 1 - Pokemon WPF.exe
+C:\Users\joost\Documents\Visual Studio 2015\Projects\Project 1 - Pokemon WPF\Project 1 - Pokemon WPF\obj\Debug\Project 1 - Pokemon WPF.pdb
+C:\Users\joost\Documents\Visual Studio 2015\Projects\Project 1 - Pokemon WPF\Project 1 - Pokemon WPF\obj\Debug\Register.g.cs
+C:\Users\joost\Documents\Visual Studio 2015\Projects\Project 1 - Pokemon WPF\Project 1 - Pokemon WPF\obj\Debug\Register.baml
+C:\Users\joost\Documents\Visual Studio 2015\Projects\Project 1 - Pokemon WPF\Project 1 - Pokemon WPF\obj\Debug\Project 1 - Pokemon WPF.csprojResolveAssemblyReference.cache
+C:\Users\joost\Documents\Visual Studio 2015\Projects\Project 1 - Pokemon WPF\Project 1 - Pokemon WPF\bin\Debug\MySql.Data.dll

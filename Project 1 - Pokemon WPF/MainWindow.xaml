@@ -5,8 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project_1___Pokemon_WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="School - Pokémon spellotjen" Height="900" Width="1400" Icon="Master-Ball.ico">
+    <Grid ScrollViewer.VerticalScrollBarVisibility="Disabled">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle x:Name="screen_register" Fill="#FFE6363E" Height="305" Stroke="Black" VerticalAlignment="Top" Margin="396,380,396,0" Opacity="0.76"/>
+        <Rectangle x:Name="screen_login" Fill="#FFE6363E" Height="250" Stroke="Black" VerticalAlignment="Top" Margin="396,380,396,0" Opacity="0.76"/>
+
+        <Image x:Name="image" HorizontalAlignment="Left" Height="500" Margin="0,35,-8,0" VerticalAlignment="Top" Width="1400" Grid.ColumnSpan="2"/>
+        <Button x:Name="btn_login" Content="Login" Margin="425,550,807,0" VerticalAlignment="Top" Height="50" Opacity="0.8" RenderTransformOrigin="0.5,0.5" Width="160" Background="#FF6E0000" FontFamily="Segoe WP Black" FontSize="16" Click="btn_login_Click"/>
+        <Button x:Name="btn_register" Content="Register" Margin="616,550,616,0" VerticalAlignment="Top" Height="50" Opacity="0.8" Click="btn_register_Click" Width="160" Background="#FF6E0000" FontFamily="Segoe WP Black" FontSize="16"/>
+        <Button x:Name="btn_forgotPassword" Content="Forgot Password?" Margin="807,550,425,0" VerticalAlignment="Top" Height="50" Opacity="0.8" Width="160" Background="#FF6E0000" FontFamily="Segoe WP Black" FontSize="16"/>
+        <Image x:Name="School___Pokemon_png" Margin="234,227,234,524" Source="School---Pokemon.png" Stretch="Fill" Opacity="0.9"/>
+        <TextBox x:Name="txt_username" Height="44" Margin="429,410,429,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" FontFamily="Segoe WP Black" FontSize="20" Opacity="0.8" GotFocus="txt_username_GotFocus"/>
+        <TextBox x:Name="txt_password" Height="44"  Margin="429,470,429,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" FontFamily="Segoe WP Black" FontSize="20" Opacity="0.8" GotFocus="txt_password_GotFocus"/>
+        <Button x:Name="btn_registerscreen_register" Content="Register" Margin="616,610,616,0" VerticalAlignment="Top" Height="50" Opacity="0.8" Click="btn_registerscreen_register_Click" Width="160" Background="#FF6E0000" FontFamily="Segoe WP Black" FontSize="16"/>
+        <Button x:Name="btn_registerscreen_back" Content="Back" Margin="425,610,807,0" VerticalAlignment="Top" Height="50" Opacity="0.8" RenderTransformOrigin="0.5,0.5" Width="160" Background="#FF6E0000" FontFamily="Segoe WP Black" FontSize="16" Click="btn_registerscreen_back_Click"/>
+        <TextBox x:Name="txt_mail" Height="44" Margin="429,530,429,0" TextWrapping="Wrap" Text="Mail" VerticalAlignment="Top" FontFamily="Segoe WP Black" FontSize="20" Opacity="0.8" GotFocus="txt_mail_GotFocus"/>
+        <TextBox x:Name="txt_username_login" Height="44" Margin="429,410,429,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" FontFamily="Segoe WP Black" FontSize="20" Opacity="0.8" GotFocus="txt_username_login_GotFocus"/>
+        <TextBox x:Name="txt_password_login" Height="44"  Margin="429,470,429,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" FontFamily="Segoe WP Black" FontSize="20" Opacity="0.8" GotFocus="txt_password_login_GotFocus"/>
+
     </Grid>
 </Window>
