@@ -181,11 +181,11 @@ namespace Project_1___Pokemon_WPF
                             PokeGameForm.Show();
                         
                             
-                    }
-                        else
-                        {
-                            MessageBox.Show("Deze gegevens zijn ghelaas onjuist mienier");
-                        } 
+                        }
+                    else
+                    {
+                        MessageBox.Show("Deze gegevens zijn ghelaas onjuist mienier");
+                    } 
                 }
 
                 else

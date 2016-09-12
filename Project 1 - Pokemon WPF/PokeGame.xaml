@@ -5,11 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project_1___Pokemon_WPF"
         mc:Ignorable="d"
-        Title="PokeGame" Height="300" Width="300"
-        WindowStartupLocation="CenterScreen" WindowState="Maximized"
+        Title="PokeGame" Height="1080" Width="1920"
+        WindowStartupLocation="CenterScreen" WindowState="Maximized" Icon="images/Master-Ball.ico"
         
         >
     <Grid>
-        <Label x:Name="lbl_welkom" Content="Label" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="80"/>
+        <Label x:Name="lbl_welkom" Content="Welcome, &lt;name&gt;" Margin="10,50,10,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_ingelogd" Content="Logged in" Margin="10,81,10,0" VerticalAlignment="Top"/>
+
+        <Menu x:Name="menu" Height="35" Margin="10,10,10,0" VerticalAlignment="Top">
+            <MenuItem Header="Account" Height="35" Width="150">
+                <MenuItem.Icon>
+                    <Image Width="16" Height="16" Source="images/logoff_icon.png"></Image>
+                </MenuItem.Icon>
+                <MenuItem Header="Log off" Width="150" Height="35" Click="MenuItem_Click_LogOff"/>
+            </MenuItem>
+            <MenuItem Header="Future stuff" Width="150" Height="35"/>
+        </Menu>
+        
+        
+
     </Grid>
 </Window>
