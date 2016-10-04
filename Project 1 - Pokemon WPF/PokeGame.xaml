@@ -22,8 +22,8 @@
             </MenuItem>
             <MenuItem Header="Future stuff" Width="150" Height="35"/>
         </Menu>
-        
-        
+
+
 
     </Grid>
 </Window>

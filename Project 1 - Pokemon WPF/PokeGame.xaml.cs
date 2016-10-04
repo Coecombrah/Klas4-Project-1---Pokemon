@@ -40,8 +40,8 @@ namespace Project_1___Pokemon_WPF
         {
             this.Hide();
             MainWindow MainWindowForm = new MainWindow();
-            MainWindowForm.Show();
-            
+            MainWindowForm.Show();  
         }
+
     }
 }
