@@ -22,6 +22,7 @@
             </MenuItem>
             <MenuItem Header="Future stuff" Width="150" Height="35"/>
         </Menu>
+        <Canvas x:Name="canvas1" HorizontalAlignment="Left" Height="800" Margin="90,165,0,0" VerticalAlignment="Top" Width="1750"/>
 
 
 
