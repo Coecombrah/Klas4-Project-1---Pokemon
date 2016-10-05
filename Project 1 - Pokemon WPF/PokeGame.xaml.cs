@@ -65,3 +65,6 @@ namespace Project_1___Pokemon_WPF
 
     }
 }
+
+
+// 5-10-2016: Ziek thuis
