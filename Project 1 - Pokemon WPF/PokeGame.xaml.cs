@@ -68,3 +68,4 @@ namespace Project_1___Pokemon_WPF
 
 
 // 5-10-2016: Ziek thuis
+// 10/11-10-2016: Ziek thuis (2 maal tandarts met verdovingen)
