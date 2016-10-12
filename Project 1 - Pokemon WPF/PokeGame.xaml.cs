@@ -20,12 +20,9 @@ namespace Project_1___Pokemon_WPF
     public partial class PokeGame : Window
     {
         BitmapImage carBitmap = new BitmapImage(new Uri("pack://application:,,,/Images/download.png", UriKind.Absolute));
-        Image[] carImg = new Image[5];
-        Random rnd = new Random();
-
         public PokeGame(string userLoggedName, double userLogged)
             //userLoggedName = the name that comes from login screen
-            //userLogged should be "1". Stating that there's a user logged in. To log out we can change this back to "0".
+            //userLogged should be "1". Stating that there's a user logged in. To log out we can change this back to "0".cou
 
             
         {
@@ -39,20 +36,22 @@ namespace Project_1___Pokemon_WPF
                 lbl_ingelogd.Content = "Not logged in";
             }
 
+            double windowsWidth = System.Windows.SystemParameters.PrimaryScreenWidth;
 
-            double maxX = canvas1.Width - carBitmap.Width;
-            double maxY = canvas1.Height - carBitmap.Height;
-            for (int i = 0; i < carImg.Length; i++)
+            int imgCount = 100;
+            List<Image> imageList = new List<Image>();
+            for (int i = 0; i < imgCount; i++)
             {
-                carImg[i] = new Image();
-                carImg[i].Source = carBitmap;
-                carImg[i].Width = carBitmap.Width;
-                carImg[i].Height = carBitmap.Height;
-                Canvas.SetLeft(carImg[i], rnd.NextDouble() * maxX);
-                Canvas.SetTop(carImg[i], rnd.NextDouble() * maxY);
-                canvas1.Children.Add(carImg[i]);
+                Image img_ding = new Image();
+                img_ding.Source = carBitmap;
+                img_ding.Height = 200;
+                img_ding.Width = 200;
+                imageList.Add(img_ding);
             }
-
+            foreach (Image img in imageList)
+            {
+              
+            }
 
         }
         
@@ -67,5 +66,6 @@ namespace Project_1___Pokemon_WPF
 }
 
 
+//afwezigheidchizzle
 // 5-10-2016: Ziek thuis
 // 10/11-10-2016: Ziek thuis (2 maal tandarts met verdovingen)
