@@ -36,7 +36,7 @@ namespace Project_1___Pokemon_WPF
             userLoggedName = "";
             userLogged = 0;
             InitializeComponent();
-            this.Background = new ImageBrush(new BitmapImage(new Uri(@"C:\Users\joost\Documents\visual studio 2015\Projects\Project 1 - Pokemon WPF\Afbeeldingen\inlog.jpg")));
+            this.Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/Images/Backgrounds/Inlog.jpg")));
 
             //All components that needs to be hidden at start up.
             screen_register.Height = 0;
@@ -156,6 +156,18 @@ namespace Project_1___Pokemon_WPF
 
         public void btn_login_Click(object sender, RoutedEventArgs e)
         {
+            if(txt_password_login.Text == "123456789" || txt_password_login.Text == "123456789")
+            {
+                MessageBox.Show("Offline ingelogd. Gebruik deze gegevens natuurlijk niet als je verbinding wilt maken met de database.");
+                userLoggedName = txt_username_login.Text;
+                userLogged = 1;
+                this.Hide();
+                PokeGame PokeGameForm = new PokeGame(userLoggedName, userLogged);
+                PokeGameForm.Show();
+            }
+            else {
+
+            
             try
             {
                 if (txt_password_login.Text.Length > 7 || txt_password_login.Text.Length > 7)
@@ -200,6 +212,7 @@ namespace Project_1___Pokemon_WPF
             {
                 MessageBox.Show(es.Message);
 
+            }
             }
         }
 

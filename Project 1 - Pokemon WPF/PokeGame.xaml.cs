@@ -19,16 +19,15 @@ namespace Project_1___Pokemon_WPF
     /// </summary>
     public partial class PokeGame : Window
     {
-        BitmapImage carBitmap = new BitmapImage(new Uri("pack://application:,,,/Images/download.png", UriKind.Absolute));
+        
         public PokeGame(string userLoggedName, double userLogged)
             //userLoggedName = the name that comes from login screen
-            //userLogged should be "1". Stating that there's a user logged in. To log out we can change this back to "0".cou
-
-            
+            //userLogged should be "1". Stating that there's a user logged in. To log out we can change this back to "0".
         {
 
             InitializeComponent();
-            this.Background = new ImageBrush(new BitmapImage(new Uri(@"C:\Users\joost\Documents\visual studio 2015\Projects\Project 1 - Pokemon WPF\Afbeeldingen\PokeGame_background.png")));
+
+            this.Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/Images/Backgrounds/PokeGame_background.png")));
             lbl_welkom.Content = "Welcome, " + userLoggedName; //Left upper corner shows welcome, <name> to see who's logged in.
             if (userLogged == 1) {
                 lbl_ingelogd.Content = "Successfully logged in";
@@ -36,21 +35,43 @@ namespace Project_1___Pokemon_WPF
                 lbl_ingelogd.Content = "Not logged in";
             }
 
-            double windowsWidth = System.Windows.SystemParameters.PrimaryScreenWidth;
-
-            int imgCount = 100;
+            int imgCount = 152;
+            int left = 0;
+            int top = 0;
             List<Image> imageList = new List<Image>();
             for (int i = 0; i < imgCount; i++)
             {
+                string img = i.ToString().PadLeft(3, '0');
+                BitmapImage carBitmap = new BitmapImage(new Uri("pack://application:,,,/Images/All_Sprites/" + img + ".png", UriKind.Absolute));
+
+                if (i % 10 == 0)
+                {
+                    if (i != 0)
+                    {
+                        top += 175;
+                        left = 0;
+                    } else
+                    {
+                        top = 0;
+                        left = 0;
+                    }
+                }
+
                 Image img_ding = new Image();
                 img_ding.Source = carBitmap;
-                img_ding.Height = 200;
-                img_ding.Width = 200;
+                img_ding.Height = 150;
+                img_ding.Width = 150;
+                img_ding.Margin = new Thickness(left, top ,0 ,0);
                 imageList.Add(img_ding);
+                left += 175;
             }
+
+            int j = 0;
+            
             foreach (Image img in imageList)
             {
-              
+                imageCanvas.Children.Add(img);
+                j++;
             }
 
         }
@@ -62,6 +83,26 @@ namespace Project_1___Pokemon_WPF
             MainWindowForm.Show();  
         }
 
+        private void MenuItem_Click_Retro(object sender, RoutedEventArgs e)
+        {
+            this.Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/Images/Backgrounds/PokeGame_Background_Retro.jpg")));
+            lbl_ingelogd.Foreground = new SolidColorBrush(Colors.Yellow);
+            lbl_welkom.Foreground = new SolidColorBrush(Colors.Yellow);
+        }
+
+        private void MenuItem_Click_Black(object sender, RoutedEventArgs e)
+        {
+            this.Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/Images/Backgrounds/PokeGame_Background_Black.jpg")));
+            lbl_ingelogd.Foreground = new SolidColorBrush(Colors.Red);
+            lbl_welkom.Foreground = new SolidColorBrush(Colors.Red);
+        }
+
+        private void MenuItem_Click_Default(object sender, RoutedEventArgs e)
+        {
+            this.Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/Images/Backgrounds/PokeGame_background.png")));
+            lbl_ingelogd.Foreground = new SolidColorBrush(Colors.White);
+            lbl_welkom.Foreground = new SolidColorBrush(Colors.White);
+        }
     }
 }
 
