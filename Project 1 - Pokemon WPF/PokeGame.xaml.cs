@@ -35,6 +35,8 @@ namespace Project_1___Pokemon_WPF
                 lbl_ingelogd.Content = "Not logged in";
             }
 
+
+
             int imgCount = 152;
             int left = 0;
             int top = 0;
@@ -56,6 +58,8 @@ namespace Project_1___Pokemon_WPF
                         left = 0;
                     }
                 }
+
+          
 
                 Image img_ding = new Image();
                 img_ding.Source = carBitmap;
@@ -88,6 +92,11 @@ namespace Project_1___Pokemon_WPF
             this.Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/Images/Backgrounds/PokeGame_Background_Retro.jpg")));
             lbl_ingelogd.Foreground = new SolidColorBrush(Colors.Yellow);
             lbl_welkom.Foreground = new SolidColorBrush(Colors.Yellow);
+            menu.Background = new SolidColorBrush(Colors.Yellow);
+            menu2.Background = new SolidColorBrush(Colors.Yellow);
+            menu3.Background = new SolidColorBrush(Colors.Yellow);
+            menu4.Background = new SolidColorBrush(Colors.Yellow);
+            menu5.Background = new SolidColorBrush(Colors.Yellow);
         }
 
         private void MenuItem_Click_Black(object sender, RoutedEventArgs e)
@@ -95,6 +104,11 @@ namespace Project_1___Pokemon_WPF
             this.Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/Images/Backgrounds/PokeGame_Background_Black.jpg")));
             lbl_ingelogd.Foreground = new SolidColorBrush(Colors.Red);
             lbl_welkom.Foreground = new SolidColorBrush(Colors.Red);
+            menu.Background = new SolidColorBrush(Colors.Red);
+            menu2.Background = new SolidColorBrush(Colors.Red);
+            menu3.Background = new SolidColorBrush(Colors.Red);
+            menu4.Background = new SolidColorBrush(Colors.Red);
+            menu5.Background = new SolidColorBrush(Colors.Red);
         }
 
         private void MenuItem_Click_Default(object sender, RoutedEventArgs e)
@@ -102,6 +116,11 @@ namespace Project_1___Pokemon_WPF
             this.Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/Images/Backgrounds/PokeGame_background.png")));
             lbl_ingelogd.Foreground = new SolidColorBrush(Colors.White);
             lbl_welkom.Foreground = new SolidColorBrush(Colors.White);
+            menu.Background = new SolidColorBrush(Colors.White);
+            menu2.Background = new SolidColorBrush(Colors.White);
+            menu3.Background = new SolidColorBrush(Colors.White);
+            menu4.Background = new SolidColorBrush(Colors.White);
+            menu5.Background = new SolidColorBrush(Colors.White);
         }
     }
 }
