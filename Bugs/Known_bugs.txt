@@ -1,1 +1,2 @@
-Niks werkt meer.
+1. Na inlog is opeens de menu balk niet meer te zien en zijn de Pokémon in de lijst niet netjes allemaal in beeld te zien
+2. De eerste Pokémon word 2 keer getoond

@@ -10,7 +10,7 @@
         
         >
     <Grid Margin="0,0,0,0">
-        <Menu x:Name="menu" Height="35" Margin="0,0,0,1014" VerticalAlignment="Bottom" HorizontalContentAlignment="Stretch">
+        <Menu x:Name="menu" Height="35" Margin="0,0,0,973" VerticalAlignment="Bottom" HorizontalContentAlignment="Stretch">
             <MenuItem  Header="Account" Height="35" Width="150">
                 <MenuItem.Icon>
                     <Image Width="16" Height="16" Source="images/logoff_icon.png"/>
