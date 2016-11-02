@@ -133,7 +133,6 @@
     <Resource Include="Images\All_Sprites\012.png" />
     <Resource Include="Images\All_Sprites\013.png" />
     <Resource Include="Images\All_Sprites\014.png" />
-    <Resource Include="Images\All_Sprites\015.png" />
     <Resource Include="Images\All_Sprites\016.png" />
     <Resource Include="Images\All_Sprites\017.png" />
     <Resource Include="Images\All_Sprites\018.png" />
@@ -281,6 +280,30 @@
     <Resource Include="Images\Backgrounds\PokeGame_background.png" />
     <Resource Include="Images\Backgrounds\PokeGame_Background_Black.jpg" />
     <Resource Include="Images\Backgrounds\PokeGame_Background_Retro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Sprites2\1.png" />
+    <Resource Include="Images\Sprites2\10.png" />
+    <Resource Include="Images\Sprites2\11.png" />
+    <Resource Include="Images\Sprites2\12.png" />
+    <Resource Include="Images\Sprites2\13.png" />
+    <Resource Include="Images\Sprites2\14.png" />
+    <Resource Include="Images\Sprites2\15.png" />
+    <Resource Include="Images\Sprites2\16.png" />
+    <Resource Include="Images\Sprites2\17.png" />
+    <Resource Include="Images\Sprites2\18.png" />
+    <Resource Include="Images\Sprites2\19.png" />
+    <Resource Include="Images\Sprites2\2.png" />
+    <Resource Include="Images\Sprites2\20.png" />
+    <Resource Include="Images\Sprites2\21.png" />
+    <Resource Include="Images\Sprites2\22.png" />
+    <Resource Include="Images\Sprites2\3.png" />
+    <Resource Include="Images\Sprites2\4.png" />
+    <Resource Include="Images\Sprites2\5.png" />
+    <Resource Include="Images\Sprites2\6.png" />
+    <Resource Include="Images\Sprites2\7.png" />
+    <Resource Include="Images\Sprites2\8.png" />
+    <Resource Include="Images\Sprites2\9.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

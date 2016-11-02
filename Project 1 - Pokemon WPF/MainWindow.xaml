@@ -25,7 +25,7 @@
         <Button x:Name="btn_registerscreen_register" Content="Register" Margin="211,610,616,0" VerticalAlignment="Top" Height="50" Opacity="0.8" Click="btn_registerscreen_register_Click" Width="160" Background="#FF6E0000" FontFamily="Segoe WP Black" FontSize="16" Grid.Column="1"/>
         <Button x:Name="btn_registerscreen_back" Content="Back" Margin="20,610,807,0" VerticalAlignment="Top" Height="50" Opacity="0.8" RenderTransformOrigin="0.5,0.5" Width="160" Background="#FF6E0000" FontFamily="Segoe WP Black" FontSize="16" Click="btn_registerscreen_back_Click" Grid.Column="1"/>
         <TextBox x:Name="txt_mail" Height="44" Margin="24,530,429,0" TextWrapping="Wrap" Text="Mail" VerticalAlignment="Top" FontFamily="Segoe WP Black" FontSize="20" Opacity="0.8" GotFocus="txt_mail_GotFocus" Grid.Column="1"/>
-        <TextBox x:Name="txt_username_login" Height="44" Margin="24,410,429,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" FontFamily="Segoe WP Black" FontSize="20" Opacity="0.8" GotFocus="txt_username_login_GotFocus" Grid.Column="1"/>
+        <TextBox x:Name="txt_username_login" Height="44" Margin="24,410,429,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" FontFamily="Segoe WP Black" FontSize="20" Opacity="0.8" GotFocus="txt_username_login_GotFocus" Grid.Column="1" TextChanged="txt_username_login_TextChanged"/>
         <TextBox x:Name="txt_password_login" Height="44"  Margin="24,470,429,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" FontFamily="Segoe WP Black" FontSize="20" Opacity="0.8" GotFocus="txt_password_login_GotFocus" Grid.Column="1"/>
 
     </Grid>

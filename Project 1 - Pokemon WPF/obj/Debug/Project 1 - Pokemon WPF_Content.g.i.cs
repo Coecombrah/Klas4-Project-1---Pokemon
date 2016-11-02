@@ -8,6 +8,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/backgrounds/inlog.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sprites2/1.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sprites2/10.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sprites2/11.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sprites2/12.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sprites2/13.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sprites2/14.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sprites2/15.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sprites2/16.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sprites2/17.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sprites2/18.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sprites2/19.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sprites2/2.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sprites2/20.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sprites2/21.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sprites2/22.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sprites2/3.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sprites2/4.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sprites2/5.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sprites2/6.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sprites2/7.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sprites2/8.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sprites2/9.png")]
 
 

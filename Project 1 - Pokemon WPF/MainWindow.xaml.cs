@@ -28,6 +28,8 @@ namespace Project_1___Pokemon_WPF
     {
         public string userLoggedName { get; set; }
         public double userLogged { get; set; }
+        public string usernameLogged { get; set; }
+        public int idLogged { get; set; }
 
         string constring = "datasource=127.0.0.1; port=3307; username=root; password=usbw;";
         public MainWindow()
@@ -162,7 +164,7 @@ namespace Project_1___Pokemon_WPF
                 userLoggedName = txt_username_login.Text;
                 userLogged = 1;
                 this.Hide();
-                PokeGame PokeGameForm = new PokeGame(userLoggedName, userLogged);
+                PokeGame PokeGameForm = new PokeGame(userLoggedName, userLogged, usernameLogged, idLogged);
                 PokeGameForm.Show();
             }
             else {
@@ -184,12 +186,31 @@ namespace Project_1___Pokemon_WPF
                             count = count + 1;
                         }
 
+
+
                         if (count == 1)
                         {
+                            dbr.Close();
+                            dbr.Dispose();
+                            string UserQuery = "SELECT Username, users_ID FROM users WHERE users.username = '" + txt_password_login.Text + "'";
+                            MySqlDataReader Userdbr;
+                            Userdbr = cmd.ExecuteReader();
+                            while (Userdbr.Read())
+                            {
+                                int Usercount = 1;
+                                while ((Usercount == 1)) { 
+                                    usernameLogged = Userdbr.GetString("Username");
+                                    idLogged = Userdbr.GetInt16("users_ID");
+                                    Usercount++;
+                                }
+                            }
+
+
+                            
                             userLoggedName = txt_username_login.Text;
                             userLogged = 1;
                             this.Hide();
-                            PokeGame PokeGameForm = new PokeGame(userLoggedName, userLogged);
+                            PokeGame PokeGameForm = new PokeGame(userLoggedName, userLogged, usernameLogged, idLogged);
                             PokeGameForm.Show();
                         
                             
@@ -231,6 +252,11 @@ namespace Project_1___Pokemon_WPF
         private void txt_password_login_GotFocus(object sender, RoutedEventArgs e)
         {
             txt_password_login.Clear();
+        }
+
+        private void txt_username_login_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

@@ -16,12 +16,9 @@ C:\Users\joost\Documents\Visual Studio 2015\Projects\Project 1 - Pokemon WPF\Pro
 C:\Users\joost\Documents\Visual Studio 2015\Projects\Project 1 - Pokemon WPF\Project 1 - Pokemon WPF\obj\Debug\PokeGame.g.cs
 C:\Users\joost\Documents\Visual Studio 2015\Projects\Project 1 - Pokemon WPF\Project 1 - Pokemon WPF\obj\Debug\PokeGame.baml
 C:\Users\joost\Documents\Klas4-Project-1-Pokemon\Project 1 - Pokemon WPF\bin\Debug\Project 1 - Pokemon WPF.exe.config
-C:\Users\joost\Documents\Klas4-Project-1-Pokemon\Project 1 - Pokemon WPF\obj\Debug\Project 1 - Pokemon WPF.exe
-C:\Users\joost\Documents\Klas4-Project-1-Pokemon\Project 1 - Pokemon WPF\obj\Debug\Project 1 - Pokemon WPF.pdb
 C:\Users\joost\Documents\Klas4-Project-1-Pokemon\Project 1 - Pokemon WPF\bin\Debug\Project 1 - Pokemon WPF.exe
 C:\Users\joost\Documents\Klas4-Project-1-Pokemon\Project 1 - Pokemon WPF\bin\Debug\Project 1 - Pokemon WPF.pdb
 C:\Users\joost\Documents\Klas4-Project-1-Pokemon\Project 1 - Pokemon WPF\bin\Debug\MySql.Data.dll
-C:\Users\joost\Documents\Klas4-Project-1-Pokemon\Project 1 - Pokemon WPF\obj\Debug\Project 1 - Pokemon WPF.csprojResolveAssemblyReference.cache
 C:\Users\joost\Documents\Klas4-Project-1-Pokemon\Project 1 - Pokemon WPF\obj\Debug\MainWindow.g.cs
 C:\Users\joost\Documents\Klas4-Project-1-Pokemon\Project 1 - Pokemon WPF\obj\Debug\PokeGame.g.cs
 C:\Users\joost\Documents\Klas4-Project-1-Pokemon\Project 1 - Pokemon WPF\obj\Debug\App.g.cs
@@ -32,3 +29,5 @@ C:\Users\joost\Documents\Klas4-Project-1-Pokemon\Project 1 - Pokemon WPF\obj\Deb
 C:\Users\joost\Documents\Klas4-Project-1-Pokemon\Project 1 - Pokemon WPF\obj\Debug\Project 1 - Pokemon WPF.g.resources
 C:\Users\joost\Documents\Klas4-Project-1-Pokemon\Project 1 - Pokemon WPF\obj\Debug\Project_1___Pokemon_WPF.Properties.Resources.resources
 C:\Users\joost\Documents\Klas4-Project-1-Pokemon\Project 1 - Pokemon WPF\obj\Debug\Project 1 - Pokemon WPF.csproj.GenerateResource.Cache
+C:\Users\joost\Documents\Klas4-Project-1-Pokemon\Project 1 - Pokemon WPF\obj\Debug\Project 1 - Pokemon WPF.exe
+C:\Users\joost\Documents\Klas4-Project-1-Pokemon\Project 1 - Pokemon WPF\obj\Debug\Project 1 - Pokemon WPF.pdb

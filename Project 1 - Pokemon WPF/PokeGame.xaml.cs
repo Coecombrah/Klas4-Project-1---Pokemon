@@ -25,7 +25,7 @@ namespace Project_1___Pokemon_WPF
 
         string constring = "datasource=127.0.0.1; port=3307;Initial Catalog='pokemon_DB'; username=root; password=usbw;";
 
-        public PokeGame(string userLoggedName, double userLogged)
+        public PokeGame(string userLoggedName, double userLogged, string usernameLoggedSQL, int idLogged)
         //userLoggedName = the name that comes from login screen
         //userLogged should be "1". Stating that there's a user logged in. To log out we can change this back to "0".
         {
@@ -33,7 +33,7 @@ namespace Project_1___Pokemon_WPF
             InitializeComponent();
 
             this.Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/Images/Backgrounds/PokeGame_background.png")));
-            lbl_welkom.Content = "Welcome, " + userLoggedName; //Left upper corner shows welcome, <name> to see who's logged in.
+            lbl_welkom.Content = "Welcome, " + usernameLoggedSQL + " je ID is: " + idLogged; //Left upper corner shows welcome, <name> to see who's logged in.
             if (userLogged == 1)
             {
                 lbl_ingelogd.Content = "Successfully logged in";
@@ -43,28 +43,29 @@ namespace Project_1___Pokemon_WPF
                 lbl_ingelogd.Content = "Not logged in";
             }
 
-            string Query = "SELECT imageNR, users.Username FROM user_pokemon, pokemon, users WHERE pokemon.pokemons_ID = user_pokemon.pokemon_ID and users.Username = 12345678";
+            string Query = "SELECT imageNR, Username FROM user_pokemon, pokemon, users WHERE pokemon.pokemons_ID = user_pokemon.pokemon_ID and user_pokemon.user_ID = 15 and users.Username = '12345678'";
             MySqlConnection con = new MySqlConnection(constring);
             MySqlCommand cmd = new MySqlCommand(Query, con);
             MySqlDataReader dbr;
             con.Open();
             dbr = cmd.ExecuteReader();
+
             int count = 0;
             while (dbr.Read())
             {
+
+                MessageBox.Show("Dit is een test");
                 int left = 0;
                 int top = 0;
                 List<Image> imageList = new List<Image>();
-                int imgCount = 152;
+                int imgCount = 100;
                 for (int i = 0; i < imgCount; i++)
                 {
-                    string img = i.ToString().PadLeft(3, '0');
-                    BitmapImage carBitmap = new BitmapImage(new Uri("pack://application:,,,/Images/All_Sprites/" + img + ".png", UriKind.Absolute));
-
                     if (i % 10 == 0)
                     {
                         if (i != 0)
                         {
+                            
                             top += 175;
                             left = 0;
                         }
@@ -74,6 +75,8 @@ namespace Project_1___Pokemon_WPF
                             left = 0;
                         }
                     }
+                    BitmapImage carBitmap = new BitmapImage(new Uri("pack://application:,,,/Images/Sprites2/" + dbr.GetInt16(0) + ".png", UriKind.Absolute));
+
                     Image img_ding = new Image();
                     img_ding.Source = carBitmap;
                     img_ding.Height = 150;
@@ -93,49 +96,52 @@ namespace Project_1___Pokemon_WPF
 
                 count++;
 
-
                 /*
-                int imgCount = 152;
-                int left = 0;
-                int top = 0;
-                List<Image> imageList = new List<Image>();
-                for (int i = 0; i < imgCount; i++)
+                
+                while (dbr.Read())
                 {
-                    string img = i.ToString().PadLeft(3, '0');
-                    BitmapImage carBitmap = new BitmapImage(new Uri("pack://application:,,,/Images/All_Sprites/" + img + ".png", UriKind.Absolute));
-
-                    if (i % 10 == 0)
+                    MessageBox.Show("Dit is een test");
+                    int left = 0;
+                    int top = 0;
+                    List<Image> imageList = new List<Image>();
+                    int imgCount = 1;
+                    for (int i = 0; i < imgCount; i++)
                     {
-                        if (i != 0)
+                        string img = i.ToString().PadLeft(3, '0');
+                        BitmapImage carBitmap = new BitmapImage(new Uri("pack://application:,,,/Images/Sprites2/" + "5" + ".png", UriKind.Absolute));
+
+                        if (i % 10 == 0)
                         {
-                            top += 175;
-                            left = 0;
-                        } else
-                        {
-                            top = 0;
-                            left = 0;
+                            if (i != 0)
+                            {
+                                top += 175;
+                                left = 0;
+                            }
+                            else
+                            {
+                                top = 0;
+                                left = 0;
+                            }
                         }
-                    }
+                        Image img_ding = new Image();
+                        img_ding.Source = carBitmap;
+                        img_ding.Height = 150;
+                        img_ding.Width = 150;
+                        img_ding.Margin = new Thickness(left, top, 0, 0);
+                        imageList.Add(img_ding);
+                        left += 175;
+                    } 
 
-
-
-                    Image img_ding = new Image();
-                    img_ding.Source = carBitmap;
-                    img_ding.Height = 150;
-                    img_ding.Width = 150;
-                    img_ding.Margin = new Thickness(left, top ,0 ,0);
-                    imageList.Add(img_ding);
-                    left += 175;
-                }
-
-                int j = 0;
+                    int j = 0;
 
                 foreach (Image img in imageList)
                 {
                     imageCanvas.Children.Add(img);
                     j++;
                 }
-                */
+
+                count++;
+            } */
             }
         }
 
