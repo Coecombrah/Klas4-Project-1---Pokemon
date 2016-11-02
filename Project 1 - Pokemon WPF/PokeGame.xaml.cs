@@ -43,7 +43,7 @@ namespace Project_1___Pokemon_WPF
                 lbl_ingelogd.Content = "Not logged in";
             }
 
-            string Query = "SELECT imageNR, Username FROM user_pokemon, pokemon, users WHERE pokemon.pokemons_ID = user_pokemon.pokemon_ID and user_pokemon.user_ID = 15 and users.Username = '12345678'";
+            string Query = "SELECT imageNR, Username FROM user_pokemon, pokemon, users WHERE pokemon.pokemons_ID = user_pokemon.pokemon_ID and user_pokemon.user_ID = '" + idLogged + "' and users.Username = '" + usernameLoggedSQL + "'";
             MySqlConnection con = new MySqlConnection(constring);
             MySqlCommand cmd = new MySqlCommand(Query, con);
             MySqlDataReader dbr;
@@ -59,7 +59,9 @@ namespace Project_1___Pokemon_WPF
                 int top = 0;
                 List<Image> imageList = new List<Image>();
                 int imgCount = 100;
+                BitmapImage carBitmap = new BitmapImage(new Uri("pack://application:,,,/Images/Sprites2/" + dbr.GetInt32(0) + ".png", UriKind.Absolute));
                 for (int i = 0; i < imgCount; i++)
+
                 {
                     if (i % 10 == 0)
                     {
@@ -75,7 +77,7 @@ namespace Project_1___Pokemon_WPF
                             left = 0;
                         }
                     }
-                    BitmapImage carBitmap = new BitmapImage(new Uri("pack://application:,,,/Images/Sprites2/" + dbr.GetInt16(0) + ".png", UriKind.Absolute));
+                    
 
                     Image img_ding = new Image();
                     img_ding.Source = carBitmap;
@@ -92,6 +94,7 @@ namespace Project_1___Pokemon_WPF
                 {
                     imageCanvas.Children.Add(img);
                     j++;
+                    left += 175;
                 }
 
                 count++;
