@@ -23,6 +23,10 @@ namespace Project_1___Pokemon_WPF
     public partial class PokeGame : Window
     {
 
+        public int left { get; set; }
+        public int top { get; set; }
+        public int count { get; set; }
+
         string constring = "datasource=127.0.0.1; port=3307;Initial Catalog='pokemon_DB'; username=root; password=usbw;";
 
         public PokeGame(string userLoggedName, double userLogged, string usernameLoggedSQL, int idLogged)
@@ -31,6 +35,7 @@ namespace Project_1___Pokemon_WPF
         {
 
             InitializeComponent();
+
 
             this.Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/Images/Backgrounds/PokeGame_background.png")));
             lbl_welkom.Content = "Welcome, " + usernameLoggedSQL + " je ID is: " + idLogged; //Left upper corner shows welcome, <name> to see who's logged in.
@@ -43,109 +48,125 @@ namespace Project_1___Pokemon_WPF
                 lbl_ingelogd.Content = "Not logged in";
             }
 
-            string Query = "SELECT imageNR, Username FROM user_pokemon, pokemon, users WHERE pokemon.pokemons_ID = user_pokemon.pokemon_ID and user_pokemon.user_ID = '" + idLogged + "' and users.Username = '" + usernameLoggedSQL + "'";
+            //string Query = "SELECT imageNR, Username FROM user_pokemon, pokemon, users WHERE pokemon.pokemons_ID = user_pokemon.pokemon_ID and user_pokemon.user_ID = '" + idLogged + "' and users.Username = '" + usernameLoggedSQL + "'";
+            string Query = "SELECT imageNR FROM pokemon";
+
             MySqlConnection con = new MySqlConnection(constring);
             MySqlCommand cmd = new MySqlCommand(Query, con);
             MySqlDataReader dbr;
             con.Open();
             dbr = cmd.ExecuteReader();
 
-            int count = 0;
             while (dbr.Read())
             {
 
-                MessageBox.Show("Dit is een test");
-                int left = 0;
-                int top = 0;
+                //MessageBox.Show("Dit is een test");
+                //             int left = 0;
                 List<Image> imageList = new List<Image>();
-                int imgCount = 100;
-                BitmapImage carBitmap = new BitmapImage(new Uri("pack://application:,,,/Images/Sprites2/" + dbr.GetInt32(0) + ".png", UriKind.Absolute));
+                int imgCount = 1;
+                BitmapImage carBitmap = new BitmapImage(new Uri("pack://application:,,,/Images/Sprites3/" + dbr.GetInt32(0) + ".png", UriKind.Absolute));
                 for (int i = 0; i < imgCount; i++)
 
                 {
-                    if (i % 10 == 0)
+                    if (count % 10 == 0)
                     {
-                        if (i != 0)
+                        if (count != 0)
                         {
-                            
+
                             top += 175;
                             left = 0;
+
                         }
                         else
                         {
                             top = 0;
-                            left = 0;
+                            //                          left = 0;
                         }
+
                     }
-                    
+
+                    // 1 min
 
                     Image img_ding = new Image();
                     img_ding.Source = carBitmap;
                     img_ding.Height = 150;
                     img_ding.Width = 150;
                     img_ding.Margin = new Thickness(left, top, 0, 0);
-                    imageList.Add(img_ding);
                     left += 175;
+                    imageList.Add(img_ding);
+
                 }
 
-                int j = 0;
+
 
                 foreach (Image img in imageList)
                 {
                     imageCanvas.Children.Add(img);
-                    j++;
-                    left += 175;
+                    left++;
+                    count++;
+                }
                 }
 
-                count++;
 
-                /*
-                
-                while (dbr.Read())
+            dbr.Close();
+
+                string Query2 = "SELECT imageNR, Username FROM user_pokemon, pokemon, users WHERE pokemon.pokemons_ID = user_pokemon.pokemon_ID and user_pokemon.user_ID = '" + idLogged + "' and users.Username = '" + usernameLoggedSQL + "'";
+                //string Query = "SELECT imageNR FROM pokemon";
+
+                MySqlCommand cmd2 = new MySqlCommand(Query2, con);
+                MySqlDataReader dbr2;
+                //con.Open();
+                dbr2 = cmd2.ExecuteReader();
+
+                while (dbr2.Read())
                 {
-                    MessageBox.Show("Dit is een test");
-                    int left = 0;
-                    int top = 0;
-                    List<Image> imageList = new List<Image>();
-                    int imgCount = 1;
-                    for (int i = 0; i < imgCount; i++)
-                    {
-                        string img = i.ToString().PadLeft(3, '0');
-                        BitmapImage carBitmap = new BitmapImage(new Uri("pack://application:,,,/Images/Sprites2/" + "5" + ".png", UriKind.Absolute));
 
-                        if (i % 10 == 0)
+                    //MessageBox.Show("Dit is een test");
+                    //             int left = 0;
+                    List<Image> imageList2 = new List<Image>();
+                    int imgCount2 = 1;
+                    BitmapImage carBitmap2 = new BitmapImage(new Uri("pack://application:,,,/Images/Sprites2/" + dbr2.GetInt32(0) + ".png", UriKind.Absolute));
+                    for (int i = 0; i < imgCount2; i++)
+
+                    {
+                        if (count % 10 == 0)
                         {
-                            if (i != 0)
+                            if (count != 0)
                             {
+
                                 top += 175;
                                 left = 0;
+
                             }
                             else
                             {
                                 top = 0;
-                                left = 0;
+                                //                          left = 0;
                             }
+
                         }
-                        Image img_ding = new Image();
-                        img_ding.Source = carBitmap;
-                        img_ding.Height = 150;
-                        img_ding.Width = 150;
-                        img_ding.Margin = new Thickness(left, top, 0, 0);
-                        imageList.Add(img_ding);
+
+                        // 1 min
+
+                        Image img_ding2 = new Image();
+                        img_ding2.Source = carBitmap2;
+                        img_ding2.Height = 150;
+                        img_ding2.Width = 150;
+                        img_ding2.Margin = new Thickness(left, top, 0, 0);
                         left += 175;
-                    } 
+                        imageList2.Add(img_ding2);
 
-                    int j = 0;
+                    }
 
-                foreach (Image img in imageList)
-                {
-                    imageCanvas.Children.Add(img);
-                    j++;
+
+                    foreach (Image img in imageList2)
+                    {
+                        imageCanvas.Children.Add(img);
+                        left++;
+                        count++;
+                    }
                 }
-
-                count++;
-            } */
-            }
+            
         }
 
         public void MenuItem_Click_LogOff(object sender, RoutedEventArgs e)
@@ -190,11 +211,83 @@ namespace Project_1___Pokemon_WPF
             menu4.Background = new SolidColorBrush(Colors.White);
             menu5.Background = new SolidColorBrush(Colors.White);
         }
-    }
-}
 
+        private void ClickOwned_Click(object sender, RoutedEventArgs e)
+        {
+
+            string Query2 = "SELECT imageNR, Username FROM user_pokemon, pokemon, users WHERE pokemon.pokemons_ID = user_pokemon.pokemon_ID and user_pokemon.user_ID = '" + DataContainer.IDOfLoggedUser + "' and users.Username = '" + DataContainer.UsernameOfLoggedUser + "'";
+
+            MySqlConnection con = new MySqlConnection(constring);
+            MySqlCommand cmd2 = new MySqlCommand(Query2, con);
+            MySqlDataReader dbr2;
+            con.Open();
+            dbr2 = cmd2.ExecuteReader();
+
+            while (dbr2.Read())
+            {
+
+                //MessageBox.Show("Dit is een test");
+                //             int left = 0;
+                List<Image> imageList2 = new List<Image>();
+                int imgCount2 = 1;
+                BitmapImage carBitmap2 = new BitmapImage(new Uri("pack://application:,,,/Images/Sprites2/" + dbr2.GetInt32(0) + ".png", UriKind.Absolute));
+                for (int i = 0; i < imgCount2; i++)
+
+                {
+                    if (count % 10 == 0)
+                    {
+                        if (count != 0)
+                        {
+
+                            top += 175;
+                            left = 0;
+
+                        }
+                        else
+                        {
+                            top = 0;
+                            //                          left = 0;
+                        }
+
+                    }
+
+                    // 1 min
+
+                    Image img_ding2 = new Image();
+                    img_ding2.Source = carBitmap2;
+                    img_ding2.Height = 150;
+                    img_ding2.Width = 150;
+                    img_ding2.Margin = new Thickness(left, top, 0, 0);
+                    left += 175;
+                    imageList2.Add(img_ding2);
+
+                }
+
+
+                foreach (Image img in imageList2)
+                {
+                    imageCanvas.Children.Add(img);
+                    left++;
+                    count++;
+                }
+            }
+        }
+
+        private void ClickAll_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+           
+    }
+    }
+
+//vragen:
+//Hoe zorg ik ervoor dat scrollviewer volledig leeg is om er vervolgens opnieuw plaatjes in te zetten?
+//ScrlVwr.Content = null;
+//werkt helaas niet omdat dan niks meer getoont kan worden.
+
+//Hoe kan ik ervoor zorgen dat de plaatjes die ik wel heb op de plek komen van het silhouette van de Pokémon? 
 
 //afwezigheidchizzle
 // 10/11-10-2016: Ziek thuis (2 maal tandarts met verdovingen)
 // 28-10-2016: ziek thuis
-                         

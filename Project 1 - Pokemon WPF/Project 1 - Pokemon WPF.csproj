@@ -62,6 +62,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DataContainer.cs" />
     <Compile Include="PokeGame.xaml.cs">
       <DependentUpon>PokeGame.xaml</DependentUpon>
     </Compile>
@@ -304,6 +305,30 @@
     <Resource Include="Images\Sprites2\7.png" />
     <Resource Include="Images\Sprites2\8.png" />
     <Resource Include="Images\Sprites2\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Sprites3\1.png" />
+    <Resource Include="Images\Sprites3\10.png" />
+    <Resource Include="Images\Sprites3\11.png" />
+    <Resource Include="Images\Sprites3\12.png" />
+    <Resource Include="Images\Sprites3\13.png" />
+    <Resource Include="Images\Sprites3\14.png" />
+    <Resource Include="Images\Sprites3\15.png" />
+    <Resource Include="Images\Sprites3\16.png" />
+    <Resource Include="Images\Sprites3\17.png" />
+    <Resource Include="Images\Sprites3\18.png" />
+    <Resource Include="Images\Sprites3\19.png" />
+    <Resource Include="Images\Sprites3\2.png" />
+    <Resource Include="Images\Sprites3\20.png" />
+    <Resource Include="Images\Sprites3\21.png" />
+    <Resource Include="Images\Sprites3\22.png" />
+    <Resource Include="Images\Sprites3\3.png" />
+    <Resource Include="Images\Sprites3\4.png" />
+    <Resource Include="Images\Sprites3\5.png" />
+    <Resource Include="Images\Sprites3\6.png" />
+    <Resource Include="Images\Sprites3\7.png" />
+    <Resource Include="Images\Sprites3\8.png" />
+    <Resource Include="Images\Sprites3\9.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

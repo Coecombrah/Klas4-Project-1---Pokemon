@@ -26,10 +26,10 @@ namespace Project_1___Pokemon_WPF
 
     public partial class MainWindow : Window
     {
-        public string userLoggedName { get; set; }
+        public static string userLoggedName { get; set; }
         public double userLogged { get; set; }
         public string usernameLogged { get; set; }
-        public int idLogged { get; set; }
+        public static int idLogged { get; set; }
 
         string constring = "datasource=127.0.0.1; port=3307; username=root; password=usbw;";
         public MainWindow()
@@ -201,6 +201,7 @@ namespace Project_1___Pokemon_WPF
                                 while ((Usercount == 1)) { 
                                     usernameLogged = Userdbr.GetString("Username");
                                     idLogged = Userdbr.GetInt16("users_ID");
+                                    DataContainer.IDOfLoggedUser = Userdbr.GetInt16("users_ID");
                                     Usercount++;
                                 }
                             }
@@ -212,8 +213,8 @@ namespace Project_1___Pokemon_WPF
                             this.Hide();
                             PokeGame PokeGameForm = new PokeGame(userLoggedName, userLogged, usernameLogged, idLogged);
                             PokeGameForm.Show();
-                        
-                            
+                            DataContainer.UsernameOfLoggedUser = txt_username_login.Text;
+
                         }
                     else
                     {

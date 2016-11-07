@@ -31,3 +31,4 @@ C:\Users\joost\Documents\Klas4-Project-1-Pokemon\Project 1 - Pokemon WPF\obj\Deb
 C:\Users\joost\Documents\Klas4-Project-1-Pokemon\Project 1 - Pokemon WPF\obj\Debug\Project 1 - Pokemon WPF.csproj.GenerateResource.Cache
 C:\Users\joost\Documents\Klas4-Project-1-Pokemon\Project 1 - Pokemon WPF\obj\Debug\Project 1 - Pokemon WPF.exe
 C:\Users\joost\Documents\Klas4-Project-1-Pokemon\Project 1 - Pokemon WPF\obj\Debug\Project 1 - Pokemon WPF.pdb
+C:\Users\joost\Documents\Klas4-Project-1-Pokemon\Project 1 - Pokemon WPF\obj\Debug\Project 1 - Pokemon WPF.csprojResolveAssemblyReference.cache

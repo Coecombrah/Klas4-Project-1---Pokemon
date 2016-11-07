@@ -25,11 +25,18 @@
                 <MenuItem x:Name="menu4" Header="Retro Theme" Width="200" Height="35" Click="MenuItem_Click_Retro"/>
                 <MenuItem x:Name="menu5" Header="Black Theme" Width="200" Height="35" Click="MenuItem_Click_Black"/>
             </MenuItem>
+            <MenuItem Header="Filter" Width="150" Height="35">
+                <MenuItem.Icon>
+                    <Image Width="16" Height="16" Source="images/logoff_icon.png"/>
+                </MenuItem.Icon>
+                <MenuItem x:Name="menu6" Header="Show owned Pokémon" Width="200" Height="35" Click="ClickOwned_Click"/>
+                <MenuItem x:Name="menu7" Header="Show all Pokémon" Width="200" Height="35" Click="ClickAll_Click"/>
+            </MenuItem>
         </Menu>
         <Label x:Name="lbl_welkom" Content="Welcome, &lt;name&gt;" Margin="10,50,10,0" VerticalAlignment="Top"/>
         <Label x:Name="lbl_ingelogd" Content="Logged in" Margin="10,81,10,0" VerticalAlignment="Top"/>
 
-        <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" Padding="0,0,0,0" Margin="0,120,0,0">
+        <ScrollViewer x:Name="ScrlVwr" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" Padding="0,0,0,0" Margin="0,120,0,0">
             <Canvas x:Name="imageCanvas" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,0,0,0" Height="2820"/>
         </ScrollViewer>
 
